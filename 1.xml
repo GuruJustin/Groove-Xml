@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package version = "8" id = "-1">
+	<tran type = "tablerefresh" id = "111">
+		<col name = "1" type = "String" newtablename = "ICIM_dbo_tbl_Country"/>
+		<col name = "2" type = "String" newtablename = "ICIM_dbo_tbl_State"/>
+		<col name = "3" type = "String" newtablename = "ICIM_dbo_tbl_TestCountry"/>
+		<col name = "4" type = "String" newtablename = "ICIM_dbo_tbl_TestState"/>	
+	</tran>
+</package>
