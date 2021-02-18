@@ -4,25 +4,21 @@ import groovy.xml.XmlParser
 /**
  * A Simple Example that searches information from XML parsed by XmlParser.
  */
-class Test {
+class GetXMLValue {
   static main(args) {
+      // Read the xml file and store the data into pack
       def pack = new XmlParser().parse(new File("1.xml"))
-      // for (int i = 0 ; i < pack.)
+
+      // define the initial variable for test and prod count
       int test = 0;
       int prod = 0;
-      // println "${pack}"
-      // println "${pack.tran.col.size()}"
-      for (int i = 0 ; i < pack.tran.col.size(); i ++) {
-        // println "${pack.tran.col[i].@newtablename}"
-        // if (pack.tran.col[i].@newtablename.indexOf("_Test") == -1)
-        //   prod ++
-        // else test ++
 
+      // Loop all the col for checking it test mode or not.
+      for (int i = 0 ; i < pack.tran.col.size(); i ++)
         pack.tran.col[i].@newtablename.indexOf("_Test") == -1 ? prod ++ : test ++;
-      }
+
+      // print the result
       print "prod = ${prod}\n"
       print "test = ${test}"
-      // def pretty = prettyPrint(pack)
-      // print "${pretty}";
   }
 }
